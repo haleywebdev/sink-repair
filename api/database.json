@@ -1,7 +1,8 @@
 {
     "plumbers": [],
     "assignments": [],
-    "requests": [
+    "requests" : [],
+    "serviceRequests": [
         {
             "id": 1,
             "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
