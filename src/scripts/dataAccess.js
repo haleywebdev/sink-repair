@@ -8,7 +8,7 @@ export const fetchRequests = () => {
     return fetch(`${API}/requests`)
         .then(response => response.json())
         .then(
-            (serviceRequests) => {
+            (requests) => {
                 // Store the external state in application state
                 applicationState.requests = serviceRequests
             }
@@ -16,6 +16,5 @@ export const fetchRequests = () => {
 }
 
 export const getRequests = () => {
-    return database.requests.map(request => ({ ... request }))
+    return database.serviceRequests.map(request => ({ ... request }))
 }
-
