@@ -1,7 +1,5 @@
-
-
 const applicationState = {
-
+    requests: []
 }
 
 const API = "http://localhost:8088"
@@ -10,13 +8,13 @@ export const fetchRequests = () => {
     return fetch(`${API}/requests`)
         .then(response => response.json())
         .then(
-            (requests) => {
+            (service) => {
                 // Store the external state in application state
-                applicationState.requests = serviceRequests
+                applicationState.requests = service
             }
         )
 }
 
 export const getRequests = () => {
-    return database.serviceRequests.map(request => ({ ... request }))
+    return applicationState.requests.map(request => ({ ... request }))
 }
