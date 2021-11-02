@@ -1,0 +1,17 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+}
+
+.label {
+    padding: 0.1rem;
+}
+
+#submitRequest {
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    background-color: rgb(117, 0, 92);
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+}

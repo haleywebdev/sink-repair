@@ -4,17 +4,19 @@ export const Requests = () => {
 
     const requestArray = getRequests()
 
-    const requestObject = () => {
-        for (const request of requestArray) {
-            return `<li>${request.description}</li>`
+    const requestObject = (each) => {
+            return `<li>${each.description}</li>`
         }
-    }
+    
 
     let html = `
         <ul>
-            ${requestArray.map(requestObject)}
+            ${
+                requestArray.map(requestObject).join("")
+            }
         </ul>
     `
 
     return html
+
 }
